@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+
+  <title>eMercado - Todo lo que busques está aquí</title>
+  
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" style="align-content: center; font-size: 18px;" href="index.html">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" style="align-content: center; font-size: 18px;" href="categories.html">Categorías</a>
+        <a class="py-2 d-none d-md-inline-block" style="align-content: center; font-size: 18px;" href="products.html">Productos</a>
+        <a class="py-2 d-none d-md-inline-block" style="align-content: center; font-size: 18px;" href="sell.html">Vender</a>
+        <div class="dropdown">
+          <a class="btn btn-secondary btn-sm dropdown-toggle" style="background-color: #3f4952;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="username" style="color: white; font-size: 18px;" class="py-2 d-none d-md-inline-block"></span>
+          </a>
+          <div class="dropdown-menu" style="background-color: #3f4952;" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" style="color: white;" href="cart.html">Ver mi carrito</a>
+            <a class="dropdown-item" style="color: white;" href="#">Mi perfil</a>
+            <a class="dropdown-item" style="color: white;" id="logOut" href="#">Cerrar sesión</a>
+          </div>
+    </div>
+  </nav>
+
+  </div>
+      <div id="cart-page" class="container cart-page">
+        <div class="row" id="cart-head">
+          <div class="col-5">
+            <p style="align-content: center; font-size: 18px;">Producto</p>
+          </div>
+          <div class="col-3" style="padding-left: 25px;">
+            <p style="align-content: center; font-size: 18px;">Cantidad</p>
+          </div>
+          <div class="col-3" style="padding-left: 150px;">
+            <p style="align-content: center; font-size: 18px;">Subtotal</p>
+          </div>
+        </div>
+        <div id="cart-display">
+          
+        </div>
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn" id="dropMenuType">Tipo De Envio</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a onclick="envioPremium()" style="color: white;">Premium(2-5 dias)</a>
+                    <a onclick="envioExpress()" style="color: white;">Express (5-8 dias)</a>
+                    <a onclick="envioStandard()" style="color: white;">Standard(12-15 dias)</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Subtotal</td>
+              <td id="shoppingCartSubTotal">$0</td>
+            </tr>
+            <tr>
+              <td>Envio</td>
+              <td id="shoppingCartSendCost"></td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td id="cartTotal">---</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+  
+
+
+
+  <!--[if IE 8]> 
+    <div class="container p-5">
+      <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
+          <h4 class="alert-heading">¡A trabajar! :)</h4>
+          <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
+          <hr>
+          <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      </div>
+    </div>
+  <![endif]-->
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
