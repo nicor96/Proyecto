@@ -211,9 +211,9 @@ function showPaymentMethods() {
                 <br>
                 <br>
                 <h5>Banco</h5>
-                <div">
-                    <h7>BROU</h7>
-                </div>
+                
+                <h7>BROU</h7>
+                
                 <br>
                 <br>
                 <h5>Número de cuenta</h5>
