@@ -228,7 +228,7 @@ a.custom-card:hover {
 }
 
 #cart-page .total-price table {
-  margin-right: 100px;
+  margin-right: 130px;
   border-top: 3px solid  #343c44;
   width: 100%;
   max-width: 300px;
@@ -249,6 +249,7 @@ a.custom-card:hover {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  width: 200px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -264,7 +265,7 @@ a.custom-card:hover {
   display: none;
   position: absolute;
   background-color: #3f4952;
-  min-width: 160px;
+  min-width: 200px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -280,3 +281,4 @@ a.custom-card:hover {
 .dropdown a:hover {background-color: #4a5661;}
 
 .show {display: block;}
+

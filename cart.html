@@ -78,24 +78,78 @@
               <td>Total</td>
               <td id="cartTotal">---</td>
             </tr>
+            <tr>
+              <td>
+                <div id="bottonTypeOfPayment" style="display: none; padding-left: 20px;">
+                  <form style="float: left;" name="nombreform">
+                  <button type="button"  class="btn btn-block btn-success" style="background-color: #3f4952; border-color: #3f4952;" data-toggle="modal" data-target="#modal1">
+                    Completar Envio
+                  </button>
+                </form>
+                </div>
+
+              </td>
+            </tr>
           </table>
         </div>
       </div>
 
   
 
-
-
-  <!--[if IE 8]> 
-    <div class="container p-5">
-      <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-          <h4 class="alert-heading">¡A trabajar! :)</h4>
-          <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-          <hr>
-          <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      <div class="modal fade" id="modal1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Elegí la forma de pago</h4>
+            </div>
+            <div class="modal-body">
+              <form class="needs-validation" action="" id="form-adentro" novalidate>
+                <div>
+                  <div>
+                    <h4>Método de pago</h4>
+                    <input  type="radio" name="pago" value="credit"  required onclick="showPaymentMethods()">
+                    <label for="credito">Crédito</label><br>
+      
+                    <input  type="radio" name="pago" value="cuenta" required onclick="showPaymentMethods()">
+                    <label for="transfer">Transferencia bancaria</label><br>
+      
+                    <div id="paymentMethods"></div><br>
+      
+                    <div class="row">
+                      <div class="col-6">
+                        <button type="submit" class="btn btn-block btn-success">Confirmar</button>
+                      </div>
+                      <div class="col-6">
+                        <button type="submit" class="btn btn-block btn-outline-secondary"
+                          data-dismiss="modal" onclick="cosito()">Cancelar</button>
+                      </div>
+                    </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  <![endif]-->
+      <script>
+
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
