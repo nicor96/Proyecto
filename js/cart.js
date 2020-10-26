@@ -211,18 +211,11 @@ function showPaymentMethods() {
                 <br>
                 <br>
                 <h5>Banco</h5>
-                <div class="row">
-                    <div class="col-5">
-                    	<select name="bancos" id="validationCustom01" class="form-control" required>
-                        <option onselect="console.log("asdad")">BBVA</option>
-                        <option>BROU</option>
-                        <option>HSBC</option>
-                        <option>Itaú</option>
-                        <option>Santander</option>
-                    	</select>   
-                    </div>
-                    <div class="col"></div>
-                </div><br>
+                <div">
+                    <h7>BROU</h7>
+                </div>
+                <br>
+                <br>
                 <h5>Número de cuenta</h5>
                 <div>
                     <h7>1456987</h7>
