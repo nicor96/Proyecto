@@ -46,19 +46,42 @@
           </a>
           <div class="dropdown-menu" style="background-color: #3f4952;" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" style="color: white;" href="cart.html">Ver mi carrito</a>
-            <a class="dropdown-item" style="color: white;" href="#">Mi perfil</a>
+            <a class="dropdown-item" style="color: white;" href="my-profile.html">Mi perfil</a>
             <a class="dropdown-item" style="color: white;" id="logOut" href="#">Cerrar sesión</a>
           </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  <div>  
+    <img id="avatarImage" src="https://i.ibb.co/23bbLkw/perfil-hombre-vacio.jpg" class="rounded-circle" alt="avatar" style="float: left; width: 300px; height: 300px; padding-top: 40px; padding-left: 20px;">
+
   </div>
+  
+  <div class="container" style="max-width: 600px; padding-top: 40px;">
+    <form id="botoncito" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="user-name">Nombre y Apellido</label>
+        <input type="text" class="form-control" id="user-name" placeholder="Ingrese su nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="user-age">Edad</label>
+        <input type="text" class="form-control" id="user-age" placeholder="Ingrese su edad" required>
+      </div>
+      <div class="form-group">
+        <label for="user-email">E-mail</label>
+        <input type="text" class="form-control" id="user-email" placeholder="Ingrese su email" required>
+      </div>
+      <div class="form-group">
+        <label for="user-phone">Telefono</label>
+        <input type="number" class="form-control" id="user-phone" placeholder="Ingrese su telefono de contacto" required>
+      </div>
+      <button style="display:block;" class="dropbtn" onclick="document.getElementById('avatarInput').click()">Cambiar foto de Perfil</button>
+      <input type='file' id="avatarInput" style="display:none">
+      <br>
+      <button type="submit" class="btn btn-block btn-success">Aplicar Cambios</button>
+    </form>
+  </div>
+
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
@@ -79,6 +102,24 @@
       <div></div>
     </div>
   </div>
+  <script>
+
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>

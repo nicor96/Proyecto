@@ -208,7 +208,7 @@ comment_input.onsubmit = function(e) {
         description: 'comentario',
         }; 
 
-    comment_data.user = localStorage.getItem("email");
+    comment_data.user = localStorage.getItem("user");
     comment_data.description = document.getElementById("comment_text").value;
     var f = new Date();
     comment_data.dateTime = f.getFullYear() + "-" + arreglaFecha(f.getMonth() +1) + "-" + arreglaFecha(f.getDate()) + "  " + arreglaFecha(f.getHours()) + ":" + arreglaFecha(f.getMinutes()) + ":" + arreglaFecha(f.getSeconds());
